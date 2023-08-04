@@ -2,12 +2,8 @@ import streamlit as st
 from datetime import timedelta
 import plotly.express as px
 from data import *
-from streamlit_autorefresh import st_autorefresh
-#from matplotlib import pyplot as plt
 
 
-for k, v in st.session_state.items():
-    st.session_state[k] = v
 
 st.set_page_config(
     page_title="Dashboard",
@@ -95,4 +91,3 @@ st.plotly_chart(fig2, use_container_width=True)
 st.dataframe(filtered_data)
 
 
-count = st_autorefresh(interval=300000, key="fizzbuzzcounter")
